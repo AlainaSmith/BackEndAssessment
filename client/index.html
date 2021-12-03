@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link href="css.css" rel="stylesheet">
+  </head>
+  <body class="container">
+<header><h2>Buttons that say things when you click them!</h2></header> 
+
+    <button id="complimentButton">Get a compliment</button>
+    <button id="fortuneButton">Click for your fortune!</button>
+    <button id="jokeButton">Tap for a funny!</button>
+    <br>
+    <br>
+    <label id="cool"> Scroll for why humans rule:</label>
+    <select name="cool" id="cool">
+        <option value="reasonOne"> We have billions of neurons that allow us to learn SO MANY THINGS</option>
+        <option value="reasonTwo"> We can make banana bread</option>
+        <option value="reasonThree"> We can surgically remove someones heart & replace it with a new one, like WHAT</option>
+    </select> 
+    <br>
+    <br>
+
+    <h4>What makes you happy?</h4>
+    <form>
+      <input
+        type='text'
+        id="source"
+        placeholder="What is the source of your happiness?"
+        style="width:250px"/>
+      
+       <br>
+      <button id ="submitButton">Submit Happiness</button>
+<br>
+<br>
+<br>
+      <input 
+            type='text'
+            id="img"
+            placeholder='happiness image URL'
+            style="width:150px"/><br>
+            <button id ="submitButton">Submit Image of Happiness</button>
+   </form>
+  
+<!-- // I want the person to be able to submit their entry and then view all added entries
+//when they click View All The Happiness button -->
+  
+
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      
+
+    //When I uncomment these my buttons do not show a response.
+    
+      // const houses = require(`./db.json`)
+      // let globalId = 1
+
+// module.exports = {
+//   getHappiness: (req, res) => {res.status(200).send(entries)},
+//   happinessLog: (req, res) => {
+//         const {source, img} = req.body
+//         let newHappiness = {
+//           source,
+//           img,
+//           id: globalId,
+//         }
+//         entries.push(newHappiness)
+//         res.status(200).send(entries)
+//         globalId++
+//       },
+// }
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortuneButton/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+      document.getElementById("jokeButton").onclick = function () {
+        axios.get("http://localhost:4000/api/jokeButton/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            })
+      };
+
+      
+
+
+      // document.getElementsById("cool").onclick = () {
+      //   axios.get("http://localhost:4000/api/cool/")
+      //   .then(function (response) {
+      //     const data = response.data;
+      //     alert(data)
+      //   })
+      // };
+
+      </script>
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+<!-- const button = document.getElementsById('fortuneButton')
+
+      button.addEventListener('click', fortune)
+
+      const fortune = () => {
+        alert()
+      } -->
+

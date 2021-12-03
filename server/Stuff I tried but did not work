@@ -1,0 +1,90 @@
+
+// I wanted to make an activity form that shows a picture of the persons 
+//favorite activity and a description about that, I tried using the
+//Back End Demo movie reference but fell short of time and understanding.
+// I've got a lot to work on.
+
+
+
+
+// <header> Post a picture with a label of your favorite activity</header>
+//  <form>
+//    <input 
+//        type='text'
+//        id="title"
+//        placeholder="Activity description"/>
+//    <input 
+//        type='text'
+//        id="img"
+//        placeholder='Image URL of activity'/>
+
+
+// // const activitiesContainer = document.querySelector('#activities-container')
+// // const baseURL = "http://localhost:4000/api/activities"
+
+// // const activitiesCallback = ({ data: activities }) => displayActivities(activities)
+// // const createActivity = body => axios.post(baseURL, body).then(activitiesCallback).catch(errCallback)
+
+
+
+//     let bodyObj = {
+//         activityName: activityName.value, 
+//         imageURL: imageURL.value
+
+//     // let activityName = document.querySelector('#activityDes')
+//     // let imageURL = document.querySelector('#img')
+// }
+
+
+// function createActivities(activityName) {
+//     const activities = document.createElement('div')
+//     activitiesCard.classList.add('activities-card')
+
+//     activitiesCard.innerHTML = `<img alt='movie cover' src=${activities.imageURL} class="activities-cover"/>
+//     <p class="activity-name">${movie.title}</p>
+// `
+
+//     activitiesContainer.appendChild(activitiesCard)
+
+// }
+// }
+
+// function displayActivities(arr) {
+//     activitiesContainer.innerHTML = ``
+//     for (let i = 0; i < arr.length; i++) {
+//         createActivityCard(arr[i])
+//     }
+// }
+
+
+
+
+// app.get(`/api/activities`, ctrl.getActivities)
+// app.post(`/api/activities`, ctrl.createActivities)
+
+
+
+
+// Then I tried making a forum where you could just see what activities have been 
+// entered if you wanted to include mulitple.
+
+
+
+{/* <header>
+<h2 class='site-title'>Favorite Activity Forum</h2>
+</header>
+
+<section class='request-area'>
+<section class='request-type'>
+  <p class='request-descriptor'>get request</p>
+  <h4>See all submitted activities</h4>
+  <button id='getSubmit'>Submit</button>
+</section> */}
+
+
+// const getSubmit = document.getElementById('getSubmit');
+// getSubmit.addEventListener('click', () => {
+//     axios
+//         .get('http://localhost:4000/api/forum')
+//         .then(res => addToView(res.data))
+// });

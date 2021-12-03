@@ -1,0 +1,26 @@
+header {
+   color: rgb(182, 86, 102)
+}
+
+#complimentButton {
+    background-color: rgb(139, 152, 228);
+    color: rgb(244, 248, 244)
+}
+
+#fortuneButton {
+    background-color: rgb(235, 137, 8);
+    color: white
+}
+
+#jokeButton {
+    background-color: violet;
+    color:white
+}
+
+h4 {
+    color:rgb(61, 139, 184)
+}
+
+#source {
+   width:100px
+}
